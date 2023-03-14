@@ -1,0 +1,144 @@
+body {
+  background-color: #d6df9e;
+}
+
+/* 애니메이션 */
+
+@keyframes rabbitMoving {
+  0% {
+    transform: translate(0%) rotate(0deg) scale(1);
+  }
+  25% {
+    transform: translateY(-30%) rotate(10deg) scale(1);
+  }
+
+  50% {
+    transform: translateY(-50%) rotate(0deg) scale(1);
+  }
+
+  75% {
+    transform: translateY(30%) rotate(-10deg) scale(1);
+  }
+  to {
+    transform: translate(0%) rotate(0deg) scale(1.2);
+  }
+}
+
+/* 캐릭터 */
+
+.rabbit {
+  animation: rabbitMoving 2s infinite alternate;
+  position: relative;
+  width: 320px;
+  height: 320px;
+  top: 50%;
+  left: 50%;
+}
+
+.rabbit .ear,
+.rabbit .face {
+  background-color: FFF2D0;
+}
+
+.ear {
+  position: absolute;
+  width: 87px;
+  height: 179px;
+  top: 160px;
+}
+
+.ear::before {
+  content: "";
+  display: block;
+  width: 30px;
+  height: 100px;
+  margin: 28px;
+}
+.ear.left {
+  position: absolute;
+  transform-origin: 100% 100%;
+  border-color: #fff2d0;
+  border-radius: 50%;
+  background-color: #fff2d0;
+  transform: rotate(-20.18deg);
+  left: -30%;
+}
+
+.ear.left::before {
+  border-radius: 50%;
+  background-color: #fff;
+}
+
+.ear.right {
+  transform-origin: 0;
+  border-color: #fff2d0;
+  background-color: #fff2d0;
+  border-radius: 50%;
+  transform: rotate(20.18deg);
+  left: 16%;
+}
+
+.ear.right::before {
+  border-radius: 50%;
+  background-color: #fff;
+}
+
+.face {
+  position: absolute;
+  width: 280px;
+  height: 200px;
+  border-radius: 350px 350px 200px 200px;
+  z-index: 1;
+  top: 117%;
+  left: 0%;
+  transform: translate(-50%, -50%);
+  background-color: #fff2d0;
+  overflow: hidden;
+}
+
+.face .eye {
+  position: absolute;
+  width: 50px;
+  height: 53px;
+  box-sizing: border-box;
+  border-radius: 60% 60% 50% 50%;
+  background: #fff;
+  border: 9px solid #544949;
+}
+
+.face .eye.left {
+  top: 40%;
+  left: 22%;
+}
+
+.face .eye.right {
+  top: 40%;
+  right: 22%;
+}
+
+.face .mouth {
+  position: absolute;
+  width: 62px;
+  height: 18px;
+  top: 63%;
+  left: 38%;
+}
+
+.face .cheek {
+  position: absolute;
+  width: 36px;
+  height: 20px;
+  border-radius: 50%;
+  background-color: #ffb1b1;
+  top: 65%;
+  z-index: 4;
+  animation: cheekMoving 0.4s ease infinite alternate;
+}
+
+.face .cheek.left {
+  left: 10%;
+}
+
+.face .cheek.right {
+  right: 10%;
+}
