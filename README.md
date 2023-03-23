@@ -1,1 +1,4 @@
-#### 토끼가 움직이는 애니메이션 효과 
+# 🐰움직이는 토끼 캐릭터
+\
+움직이는 토끼 캐릭터를 만들어 보았습니다.</br>
+URL : [https://echo-6.github.io/moving-rabbit/](https://echo-6.github.io/moving-rabbit/)
